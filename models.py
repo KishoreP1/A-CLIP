@@ -763,7 +763,7 @@ def ACLIP_VITS16(mask_ratio=0, **kwargs):
         "mask_vit_small_patch16_224", num_classes=0, mask_ratio=mask_ratio
     )
     vision_model_ema = timm.create_model(
-        "mask_vit_small_patch16_224", num_classes=0, mask_ratio=mask_ratio
+        "mask_vit_small_patch16_224", num_classes=0, mask_ratio=0
     )
     model = ACLIP(
         embed_dim=512,
