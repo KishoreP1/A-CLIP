@@ -46,7 +46,7 @@ class ACLIPLoss(nn.Module):
         image_ssl_embed = outputs["image_ssl_embed"]
         inputs = {}
         inputs["aug1_embed"] = image_ssl_embed[:bs]
-        inputs["aug2_embed"] = image_ssl_embed[:bs]
+        inputs["aug2_embed"] = image_ssl_embed[bs:]
         simclr_loss_dict = self.simclr_loss(inputs)
 
         def loss_fn(x, y):
